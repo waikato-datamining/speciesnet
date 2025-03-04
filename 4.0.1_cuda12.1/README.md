@@ -131,12 +131,15 @@ docker run -u $(id -u):$(id -g) -e USER=$USER ...
 ## Caching
 
 SpeciesNet will download pretrained models and cache them locally. To avoid having
-to download them constantly, you can the cache directory to the host machine:
+to download them constantly, you can the cache directory to the host machine.
+Some other libraries, like Matplotlib, will want to cache things as well, so you
+would want to cache these as well.
 
-* when running the container as current user
+* when running the container as current user add the following parameters
 
   ```bash
   -v /some/where/cache:/.cache \
   -v /some/where/cache:/.torch \
+  -v /some/where/config:/.config \
   ```
 

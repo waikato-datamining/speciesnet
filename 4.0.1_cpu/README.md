@@ -112,7 +112,6 @@ docker run --rm \
 ## Scripts
 
 * `speciesnet_build_geofence_release` - runs `python -m speciesnet.scripts.build_geofence_release`
-* `speciesnet_gpu_test` - runs `python -m speciesnet.scripts.gpu_test`
 * `speciesnet_run_model` - runs `python -m speciesnet.scripts.run_model`
 * `speciesnet_run_server` - runs `python -m speciesnet.scripts.run_server`
 * `speciesnet_to_md` - runs `python -m speciesnet.scripts.speciesnet_to_md`
@@ -131,12 +130,15 @@ docker run -u $(id -u):$(id -g) -e USER=$USER ...
 ## Caching
 
 SpeciesNet will download pretrained models and cache them locally. To avoid having
-to download them constantly, you can the cache directory to the host machine:
+to download them constantly, you can the cache directory to the host machine.
+Some other libraries, like Matplotlib, will want to cache things as well, so you
+would want to cache these as well.
 
-* when running the container as current user
+* when running the container as current user add the following parameters
 
   ```bash
   -v /some/where/cache:/.cache \
   -v /some/where/cache:/.torch \
+  -v /some/where/config:/.config \
   ```
 
