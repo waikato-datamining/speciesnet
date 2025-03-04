@@ -1,3 +1,0 @@
-#!/bin/bash
-
-python -m speciesnet.scripts.gpu_test "$@"
