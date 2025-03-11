@@ -115,6 +115,8 @@ docker run --rm \
 * `speciesnet_run_model` - runs `python -m speciesnet.scripts.run_model`
 * `speciesnet_run_server` - runs `python -m speciesnet.scripts.run_server`
 * `speciesnet_to_md` - runs `python -m speciesnet.scripts.speciesnet_to_md`
+* `speciesnet_predict_poll` - for generating predictions via file-polling (calls `/opt/speciesnet/predict_poll.py`)
+* `speciesnet_predict_redis` - for generating predictions via Redis (calls `/opt/speciesnet/predict_poll.py`)
 
 
 ## Permissions

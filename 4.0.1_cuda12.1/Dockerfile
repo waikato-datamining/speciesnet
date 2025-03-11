@@ -19,6 +19,16 @@ RUN apt-get update && \
 RUN pip install --no-cache-dir \
         "speciesnet[server]==4.0.1"
 
+RUN pip install --no-cache-dir \
+        python-image-complete \
+        "simple_file_poller>=0.0.12" \
+        redis \
+        "fast-opex==0.0.4" \
+        orjson \
+        "redis-docker-harness==0.0.4"
+
 COPY bash.bashrc /etc/bash.bashrc
 COPY speciesnet_* /usr/local/bin/
+COPY predict* /opt/speciesnet/
 
+ENV PYTHONPATH=/opt/speciesnet/
