@@ -108,6 +108,8 @@ docker run --rm --pull=always \
   pip freeze > requirements.txt
 ```
 
+**NB:** CUDA preamble may need removing.
+
 
 ## Scripts
 
