@@ -103,7 +103,7 @@ docker build -t speciesnet:4.0.3_cpu .
 ### Requirements
 
 ```bash
-docker run --rm \
+docker run --rm --pull=always \
   -it public.aml-repo.cms.waikato.ac.nz:443/tensorflow/speciesnet:4.0.3_cpu \
   pip freeze > requirements.txt
 ```

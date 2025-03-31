@@ -103,7 +103,7 @@ docker build -t speciesnet:4.0.3_cuda12.1 .
 ### Requirements
 
 ```bash
-docker run --rm \
+docker run --rm --pull=always \
   -it public.aml-repo.cms.waikato.ac.nz:443/tensorflow/speciesnet:4.0.3_cuda12.1 \
   pip freeze > requirements.txt
 ```
