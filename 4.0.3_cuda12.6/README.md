@@ -2,7 +2,7 @@
 
 Uses [SpeciesNet](https://github.com/google/cameratrapai).
 
-Uses CUDA 12.1 and SpeciesNet 4.0.3.
+Uses CUDA 12.6 and SpeciesNet 4.0.3.
 
 
 ## Quick start
@@ -20,7 +20,7 @@ Uses CUDA 12.1 and SpeciesNet 4.0.3.
   ```bash
   docker run --gpus=all --shm-size 8G --net=host \
     -v /local/dir:/container/dir \
-    -it public.aml-repo.cms.waikato.ac.nz:443/tensorflow/speciesnet:4.0.3_cuda12.1
+    -it public.aml-repo.cms.waikato.ac.nz:443/tensorflow/speciesnet:4.0.3_cuda12.6
   ```
 
 ### Docker hub
@@ -30,12 +30,12 @@ Uses CUDA 12.1 and SpeciesNet 4.0.3.
   ```bash
   docker run --gpus=all --shm-size 8G --net=host \
     -v /local/dir:/container/dir \
-    -it waikatodatamining/speciesnet:4.0.3_cuda12.1
+    -it waikatodatamining/speciesnet:4.0.3_cuda12.6
   ```
 
 ### Build local image
 
-* Build the image from Docker file (from within /path_to/speciesnet/4.0.3_cuda12.1)
+* Build the image from Docker file (from within /path_to/speciesnet/4.0.3_cuda12.6)
 
   ```bash
   docker build -t speciesnet .
@@ -54,7 +54,7 @@ Uses CUDA 12.1 and SpeciesNet 4.0.3.
 ### Build
 
 ```bash
-docker build -t speciesnet:4.0.3_cuda12.1 .
+docker build -t speciesnet:4.0.3_cuda12.6 .
 ```
 
 ### Inhouse registry  
@@ -63,14 +63,14 @@ docker build -t speciesnet:4.0.3_cuda12.1 .
 
   ```bash
   docker tag \
-    speciesnet:4.0.3_cuda12.1 \
-    public-push.aml-repo.cms.waikato.ac.nz:443/tensorflow/speciesnet:4.0.3_cuda12.1
+    speciesnet:4.0.3_cuda12.6 \
+    public-push.aml-repo.cms.waikato.ac.nz:443/tensorflow/speciesnet:4.0.3_cuda12.6
   ```
   
 * Push
 
   ```bash
-  docker push public-push.aml-repo.cms.waikato.ac.nz:443/tensorflow/speciesnet:4.0.3_cuda12.1
+  docker push public-push.aml-repo.cms.waikato.ac.nz:443/tensorflow/speciesnet:4.0.3_cuda12.6
   ```
   If error "no basic auth credentials" occurs, then run (enter username/password when prompted):
   
@@ -84,14 +84,14 @@ docker build -t speciesnet:4.0.3_cuda12.1 .
 
   ```bash
   docker tag \
-    speciesnet:4.0.3_cuda12.1 \
-    waikatodatamining/speciesnet:4.0.3_cuda12.1
+    speciesnet:4.0.3_cuda12.6 \
+    waikatodatamining/speciesnet:4.0.3_cuda12.6
   ```
   
 * Push
 
   ```bash
-  docker push waikatodatamining/speciesnet:4.0.3_cuda12.1
+  docker push waikatodatamining/speciesnet:4.0.3_cuda12.6
   ```
   If error "no basic auth credentials" occurs, then run (enter username/password when prompted):
   
@@ -104,7 +104,7 @@ docker build -t speciesnet:4.0.3_cuda12.1 .
 
 ```bash
 docker run --rm --pull=always \
-  -it public.aml-repo.cms.waikato.ac.nz:443/tensorflow/speciesnet:4.0.3_cuda12.1 \
+  -it public.aml-repo.cms.waikato.ac.nz:443/tensorflow/speciesnet:4.0.3_cuda12.6 \
   pip freeze > requirements.txt
 ```
 
