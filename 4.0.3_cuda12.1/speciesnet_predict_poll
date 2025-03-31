@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python /opt/speciesnet/predict_poll.py "$@"
