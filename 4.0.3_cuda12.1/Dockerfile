@@ -1,6 +1,6 @@
-ARG PYTORCH="2.3.0"
-ARG CUDA="12.1"
-ARG CUDNN="8"
+ARG PYTORCH="2.6.0"
+ARG CUDA="12.6"
+ARG CUDNN="9"
 
 ARG DOCKER_REGISTRY=public.aml-repo.cms.waikato.ac.nz:443/
 FROM ${DOCKER_REGISTRY}pytorch/pytorch:${PYTORCH}-cuda${CUDA}-cudnn${CUDNN}-devel
