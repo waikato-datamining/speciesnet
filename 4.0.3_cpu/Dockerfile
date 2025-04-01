@@ -6,6 +6,10 @@ RUN apt-get update && apt-get install -y git ninja-build libglib2.0-0 libsm6 lib
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+# Install torch
+RUN pip install --no-cache-dir torch==2.6.0 torchvision \
+   --index-url  https://download.pytorch.org/whl/cpu
+
 RUN pip install --no-cache-dir \
         "speciesnet[server]==4.0.3"
 
